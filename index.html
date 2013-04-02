@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="WhatForensics : WhatsApp forensics analysis and acquisition utility" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>WhatForensics</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jglim/WhatForensics">View on GitHub</a>
+
+          <h1 id="project_title">WhatForensics</h1>
+          <h2 id="project_tagline">WhatsApp forensics analysis and acquisition utility</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jglim/WhatForensics/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jglim/WhatForensics/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>WhatForensics</h1>
+
+<p>A C# WhatsApp acquisition and analysis tool</p>
+
+<ul>
+<li>Fast automatic acquisition</li>
+<li>View device data without running (and modifying) WhatsApp</li>
+<li>View extended data such as contact Jabber IDs, unsent messages and more!</li>
+</ul><p>When used in combination with the iTunes backup acquisition method, files on the devices will not be modified!</p>
+
+<h2>Features</h2>
+
+<p>WhatForensics uses three modes for data acquisition and analysis</p>
+
+<ul>
+<li>Load database automatically by browsing to iTunes backup folder</li>
+<li>Load database automatically from jailbroken iOS devices through AFC2 (may be forensically unsafe, although all operations are set as read-only)</li>
+<li>Manually load the database from disk </li>
+</ul><p>Once data is loaded and successfully parsed, you can..</p>
+
+<ul>
+<li>View extended group info, number of messages, last person who messaged within a group, and their associated push IDs</li>
+<li>Search through data using SQLite LIKE syntax (e.g. %cheat%, %w___forensics%)</li>
+<li>View data with a threaded format</li>
+<li>View WhatsApp blacklist set by user</li>
+<li>View contact names as stored on device</li>
+<li>View unsent messages that was composed in the textfield</li>
+<li>Export a neat HTML report!</li>
+</ul><h2>Screenshots</h2>
+
+<p>Main window with iTunes backup acquisition</p>
+
+<p><img src="https://raw.github.com/jglim/WhatForensics/master/Screenshots/MainWithAcquisition.png" alt="Main window with iTunes backup acquisition"></p>
+
+<p>Group members with blacklist</p>
+
+<p><img src="https://raw.github.com/jglim/WhatForensics/master/Screenshots/GroupMembersWithBlacklist.png" alt="Group members with blacklist"></p>
+
+<p>Wildcard Search</p>
+
+<p><img src="https://raw.github.com/jglim/WhatForensics/master/Screenshots/WildcardSearch.png" alt="Wildcard Search"></p>
+
+<p>Generated Report</p>
+
+<p><img src="https://raw.github.com/jglim/WhatForensics/master/Screenshots/GeneratedReport.png" alt="Generated Report"></p>
+
+<h2>Usage</h2>
+
+<ol>
+<li>Compile or use the prebuilt binaries</li>
+<li>Ensure uni.html exists within same folder (reporting format - can be modified!)</li>
+<li>Run (AFC2 requires iTunes to be installed)</li>
+</ol><h2>Version</h2>
+
+<p>1.0.0.1</p>
+
+<h2>License</h2>
+
+<p>MIT</p>
+
+<h2>TODO</h2>
+
+<ul>
+<li>Load data from sqlite via column names rather than indexes (compatibility)</li>
+<li>Add more filters for the search</li>
+<li>Sanitize search parameters</li>
+<li>Tidy up MessageView code (especially owner highlighting)</li>
+<li>Implement a better alternative to Manzana (to extract WA db via iTunes HouseArrest, for non-jailbroken iOS devices)</li>
+<li>Clean up date codes</li>
+<li>Use MiscHelper to pass connection string around instead of parameters</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">WhatForensics maintained by <a href="https://github.com/jglim">jglim</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
